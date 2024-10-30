@@ -15,8 +15,8 @@ COPY . ./
 
 FROM public.ecr.aws/lambda/python:3.12
 #can't test locally without it
-ADD https://github.com/aws/aws-lambda-runtime-interface-emulator/releases/latest/download/aws-lambda-rie /usr/local/bin/aws-lambda-rie
-RUN chmod 755 /usr/local/bin/aws-lambda-rie
+# ADD https://github.com/aws/aws-lambda-runtime-interface-emulator/releases/latest/download/aws-lambda-rie /usr/local/bin/aws-lambda-rie
+# RUN chmod 755 /usr/local/bin/aws-lambda-rie
 COPY ./custom_entrypoint /var/runtime/custom_entrypoint
 COPY --from=builder /app/ /var/task
 COPY --from=tailscale /app/tailscaled /var/runtime/tailscaled

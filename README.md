@@ -20,7 +20,7 @@ The lambda function needs the 3 env vars:
 I advise to limit the concurrency of the Lambda function (e.g. "5") in order not to reach the Tailscale machine limit depending on your plan
 
 
-## Account Linking
+## Account Linking     
 
 The only moment you need to expose your HA instance is during the setup when you do the [Account Linking part](https://www.home-assistant.io/integrations/alexa.smart_home/#account-linking),  (Right before the *Enable to use* part)
 
